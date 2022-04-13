@@ -1,0 +1,31 @@
+api:                                                                    
+  url: https://teamserver-darpa.contsec.com/Contrast
+  api_key: ZAh357AglIay0wqDi5iCQr4Y75mFxwLY
+  service_key: V1CDR2NFKXJESVZM
+  user_name: agent_b47d608e-1971-4560-961c-a55bd4111b61@Alexstestorg
+agent:
+  stack_trace_limit: 10
+  traverse_and_track: true
+  trust_custom_validators: false
+  logger:
+    append: false 
+    level: DEBUG
+    path: agent.log
+  reporters:      
+    logfile: true
+  security_logger:
+    level: DEBUG
+    path: security.log
+  node:
+    native_input_analisys: true
+    dev:
+      enable: true
+      global_tracker: true
+    enable_babel: false
+    rewrite_cache:
+      enable: true
+      path: ./rewrite_cache
+assess:
+  enable: true
+protect:
+  enable: false
