@@ -26,6 +26,17 @@ agent:
       enable: true
       path: ./rewrite_cache
 assess:
-  enable: true
-protect:
   enable: false
+protect:
+  enable: true
+  rules:                         
+    reflected-xss:               
+      mode: monitor              
+    path-traversal:              
+      mode: monitor              
+    cmd-injection:               
+      mode: block                
+    nosql-injection:             
+      mode: block                
+    sql-injection:               
+      mode: block  

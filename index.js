@@ -37,8 +37,15 @@ sequelize
 app.use(express.json());
 app.use("/", router);
 
+function sum(a, b) {
+  eval('2 + 2');
+
+  return a + b;
+}
+
 router.get("/", (req, res) => {
-  res.send("Hello World!");
+  console.log(sum.toString());
+  res.send("Hello World!" + sum(2, 4));
 });
 
 router.post("/users", (req, res) => {
